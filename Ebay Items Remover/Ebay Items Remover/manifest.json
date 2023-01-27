@@ -1,0 +1,21 @@
+{
+  "name": "ebay Items Remover",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Removes ebay items whose' Reserve not met",
+  "author": "Adeel Ahmad",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.ebay.com/*"],
+      "js": ["content.js"],
+      "persistent": true
+    }
+  ],
+  "host_permissions": ["<all_urls>"]
+}
